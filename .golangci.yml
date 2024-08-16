@@ -1,0 +1,50 @@
+run:
+  issues-exit-code: 1
+  tests: false
+
+
+output:
+  print-issued-lines: true
+  print-linter-name: true
+
+issues:
+  exclude-rules:
+    - linters:
+       - stylecheck
+      text: "ST1003:"
+
+    - linters:
+       - revive
+      text: "var-naming"
+
+linters-settings:
+  varnamelen:
+    ignore-type-assert-ok: true
+    ignore-map-index-ok: true
+  errcheck:
+    ignore: ''
+
+linters:
+  enable-all: true
+  disable:
+    - mnd
+    - wrapcheck
+    - exhaustruct
+    - varnamelen
+    - depguard
+    - err113
+    - tagalign
+    - tagliatelle
+    - godox
+    - godot
+    - gosec
+    - gomnd
+    - errname
+    - containedctx
+    - funlen
+    - nilnil
+    - cyclop
+    - gocognit
+    - dupword
+    - nonamedreturns
+    - gochecknoglobals
